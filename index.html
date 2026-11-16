@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pressy_Tech | Web Developer & Graphics Designer</title>
+  <meta name="description"
+    content="Pressy_Tech is a freelance web developer and graphics designer building responsive websites, brand visuals and AI automation workflows for businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#home">Skip to content</a>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Pressy<span>_</span>Tech</a>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="menu" aria-label="Main">
+        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a>
+        <a href="#skills">Skills</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hello">Hello, I'm</p>
+          <h1>Pressy_Tech</h1>
+          <h2>Web Developer &amp; Graphics Designer</h2>
+          <p class="typed-line"><span id="typed"></span><i class="caret"></i></p>
+          <p class="lead">I turn ideas into fast, functional websites and designs that make your brand look as good as
+            it works.</p>
+          <div class="btns">
+            <a href="#portfolio" class="btn primary">Explore My Work</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="portrait">
+            <img src="projects/Profile.png" alt="Pressy_Tech portrait">
+            <!-- <i class="fa-solid fa-code"></i> -->
+          </div>
+          <span class="chip c1"><i class="fa-brands fa-html5"></i> HTML</span>
+          <span class="chip c2"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span class="chip c3"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="chip c4"><i class="fa-solid fa-pen-nib"></i> Photoshop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid reveal">
+        <div>
+          <h2 class="title">About me</h2>
+          <p>I am Oloyede Abdul-Quadri Opeyemi, a passionate Web Developer and Graphics Designer dedicated to building
+            beautiful, functional, and user-friendly digital experiences. I combine creative design with technical
+            expertise to help businesses establish a strong online presence and communicate their brand effectively.</p>
+          <p>I enjoy the point where design and code meet: a layout that looks sharp, loads quickly and works on every
+            screen. Every project gets the same care, from a single landing page to a full business website.</p>
+          <!-- Put your CV at assets/cv/Pressy_Tech_CV.pdf -->
+          <!-- <a href="assets/cv/Pressy_Tech_CV.pdf" class="btn primary" download>Download CV <i
+              class="fa-solid fa-download"></i></a> -->
+        </div>
+        <div class="info-cards">
+          <div class="card"><i class="fa-solid fa-lightbulb"></i>
+            <h3>Creative Thinking</h3>
+            <p>Fresh ideas shaped around your brand.</p>
+          </div>
+          <div class="card"><i class="fa-solid fa-code"></i>
+            <h3>Clean Development</h3>
+            <p>Readable, fast and maintainable code.</p>
+          </div>
+          <div class="card"><i class="fa-solid fa-handshake"></i>
+            <h3>Client Satisfaction</h3>
+            <p>Clear communication until you are happy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2 class="title reveal">Services</h2>
+        <div class="grid4">
+          <article class="card service reveal"><i class="fa-solid fa-globe"></i>
+            <h3>Website Development</h3>
+            <p>Custom business websites with responsive layouts, built to be found and used.</p>
+          </article>
+          <article class="card service reveal"><i class="fa-solid fa-palette"></i>
+            <h3>Graphics Design</h3>
+            <p>Promotional graphics, social media designs, marketing materials and brand visuals.</p>
+          </article>
+          <article class="card service reveal"><i class="fa-solid fa-laptop-code"></i>
+            <h3>Frontend Development</h3>
+            <p>HTML, CSS and JavaScript interfaces that are interactive, responsive and optimized.</p>
+          </article>
+          <article class="card service reveal"><i class="fa-solid fa-robot"></i>
+            <h3>AI Automation</h3>
+            <p>n8n workflows, API integrations and AI-powered automation for your business processes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS (rings are generated in script.js from the SKILLS array: edit percentages there) -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="title reveal">My skills</h2>
+        <div id="skills-root"></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO (cards are generated in script.js from the PROJECTS array) -->
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2 class="title reveal">My work</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="projects" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="title reveal">How I work</h2>
+        <ol class="timeline">
+          <li class="reveal"><span class="dot">1</span>
+            <h3>Discovery</h3>
+            <p>Understanding your needs and project objectives.</p>
+          </li>
+          <li class="reveal"><span class="dot">2</span>
+            <h3>Planning</h3>
+            <p>Creating the structure, design direction and project strategy.</p>
+          </li>
+          <li class="reveal"><span class="dot">3</span>
+            <h3>Development &amp; Design</h3>
+            <p>Building the website or creating the graphics.</p>
+          </li>
+          <li class="reveal"><span class="dot">4</span>
+            <h3>Delivery</h3>
+            <p>Testing, refining and delivering the completed project.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2 class="title">Let's Build Something Amazing Together</h2>
+          <p>Have a website, design or automation in mind? Send a message and let's talk about it.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:pressy.tech1@gmail.com">pressy.tech1@gmail.com</a>
+            </li>
+            <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/9061274114">+234 906 1274 114</a></li>
+            <li><i class="fa-brands fa-facebook"></i><a
+                href="https://www.facebook.com/profile.php?id=61584323490645">Abdul Quadri
+                Oloyede</a>
+            </li>
+            <li><i class="fa-brands fa-instagram"></i><a
+                href="https://www.instagram.com/quadri36074?xtok=Yms0aXhmOGw4aXg1">@quadri36074</a>
+            </li>
+            <li><i class="fa-brands fa-linkedin"></i><a
+                href="https://www.linkedin.com/in/quadri-oloyede-01b954446/">Quadri Oloyede</a>
+            </li>
+          </ul>
+        </div>
+        <form id="form" class="card form reveal" novalidate>
+          <label>Full name<input name="name" type="text" autocomplete="name" required minlength="2"><small
+              class="err"></small></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required><small
+              class="err"></small></label>
+          <label>Subject<input name="subject" type="text" required minlength="3"><small class="err"></small></label>
+          <label>Message<textarea name="message" rows="5" required minlength="10"></textarea><small
+              class="err"></small></label>
+          <button class="btn primary" type="submit" id="send">Send Message</button>
+          <p id="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div><a href="#home" class="logo">Pressy<span>_</span>Tech</a>
+        <p>Web development, graphics design and automation for businesses that want to stand out online.</p>
+      </div>
+      <nav aria-label="Footer"><a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a
+          href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61584323490645" aria-label="Facebook"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/quadri36074?xtok=Yms0aXhmOGw4aXg1" aria-label="Instagram"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/9061274114" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/quadri-oloyede-01b954446/" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Pressy_Tech. All rights reserved.</p>
+  </footer>
+  <button id="top" class="top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+
+</html>
